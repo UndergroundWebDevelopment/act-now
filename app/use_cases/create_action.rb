@@ -4,14 +4,19 @@ class CreateAction
   end
 
   def run!
-    validate!
+    validate! && authorize!
 
-    Action.create
+    Action.create(@form.attributes)
   end
 
   private
 
   def validate!
-    raise ValidationError unless @form.valid?
+    @form.validate!
+  end
+
+  def authorize!
+    # TODO: Implement authorization logic.
+    true 
   end
 end

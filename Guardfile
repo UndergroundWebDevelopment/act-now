@@ -19,6 +19,8 @@ guard :rspec, cmd: 'bundle exec rspec' do
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
 
+
+  watch(%r{^app/(.+)\.rb$}) { |m| "spec/#{m[1]}_spec.rb" }
   watch(%r{^app/use_cases/(.+)\.rb$}) { |m| "spec/use_cases/#{m[1]}_spec.rb" }
   watch(%r{^app/repositories/(.+)\.rb$}) { |m| "spec/repositories/#{m[1]}_spec.rb" }
   watch(%r{^app/forms/(.+)\.rb$}) { |m| "spec/forms/#{m[1]}_spec.rb" }

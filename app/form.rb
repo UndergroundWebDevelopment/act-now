@@ -1,6 +1,6 @@
 require 'active_model'
 
-ValidationError = Class.new RuntimeError
+ValidationError = Tnt.boom RuntimeError
 
 class Form
   include Chassis.form
