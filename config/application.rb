@@ -6,6 +6,7 @@ Bundler.require(:default, ENV["ACT_NOW_ENV"])
 
 $:.unshift File.expand_path(File.join(__dir__, "../"))
 
+require 'form'
 # I don't really _like_ mass-requiring everything
 # in the app directory....
 Dir[File.join(__dir__, '../', 'app', '**', '*.rb')].each {|file| require file }
