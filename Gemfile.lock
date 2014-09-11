@@ -16,6 +16,7 @@ GEM
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
     backports (3.6.0)
+    bcrypt (3.1.7)
     breaker (0.1.1)
     builder (3.2.2)
     celluloid (0.15.2)
@@ -184,6 +185,7 @@ PLATFORMS
 
 DEPENDENCIES
   activemodel
+  bcrypt (~> 3.1.7)
   chassis
   codeclimate-test-reporter
   equalizer

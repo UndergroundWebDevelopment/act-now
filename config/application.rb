@@ -1,7 +1,8 @@
 require 'rubygems'
 require 'bundler/setup'
 
-Bundler.require(:default, ENV["RACK_ENV"])
+ENV["ACT_NOW_ENV"] = ENV["RACK_ENV"] || "development"
+Bundler.require(:default, ENV["ACT_NOW_ENV"])
 
 $:.unshift File.expand_path(File.join(__dir__, "../"))
 

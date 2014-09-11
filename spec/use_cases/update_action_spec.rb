@@ -19,7 +19,7 @@ RSpec.describe UpdateAction do
     expected= {}
     form.attributes.each_key do |key| 
       val = Faker::Lorem.sentence(2)
-      form.send(:key=, val)
+      form.send("#{key}=", val)
       expected[key] = val
     end
 

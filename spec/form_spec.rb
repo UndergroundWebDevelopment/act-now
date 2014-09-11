@@ -3,7 +3,7 @@ RSpec.describe Form do
     context "if not valid" do
       subject do 
         form = Form.new
-        allow(form).to receive(:valid?)
+        allow(form).to receive(:valid?).and_return(false)
         form
       end
 

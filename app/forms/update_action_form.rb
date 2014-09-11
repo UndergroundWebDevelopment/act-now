@@ -1,3 +1,4 @@
 class UpdateActionForm < Form
-  attr_accessor :title, :completed
+  attribute :title, String
+  attribute :completed, Boolean
 end

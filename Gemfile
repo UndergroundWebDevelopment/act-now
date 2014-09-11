@@ -3,6 +3,7 @@ source "https://rubygems.org"
 
 gem 'chassis'
 gem 'activemodel'
+gem 'bcrypt', '~> 3.1.7'
 gem 'equalizer'
 
 group :test do
