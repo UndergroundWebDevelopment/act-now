@@ -1,6 +1,13 @@
 Act Now
 -------
 
+[![Build
+Status](https://travis-ci.org/UndergroundWebDevelopment/act-now.svg?branch=master)](https://travis-ci.org/UndergroundWebDevelopment/act-now)
+[![Code
+Climate](https://codeclimate.com/github/UndergroundWebDevelopment/act-now/badges/gpa.svg)](https://codeclimate.com/github/UndergroundWebDevelopment/act-now)
+[![Test
+Coverage](https://codeclimate.com/github/UndergroundWebDevelopment/act-now/badges/coverage.svg)](https://codeclimate.com/github/UndergroundWebDevelopment/act-now)
+
 Countless times each day we are faced with the question of "what will I do 
 now?". Whether the question comes up when you have 10 minutes to kill waiting 
 for the bus, or early on a Saturday morning with a whole day ahead of you, this 
