@@ -10,6 +10,7 @@ group :test do
   gem 'timecop'
   gem 'rspec-its', require: 'rspec/its'
   gem 'faker'
+  gem 'codeclimate-test-reporter', require: nil
 end
 
 group :development do
@@ -17,4 +18,6 @@ group :development do
   gem 'guard-ctags-bundler'
   gem 'guard-rspec'
   gem 'terminal-notifier-guard'
+
+  gem 'travis'
 end

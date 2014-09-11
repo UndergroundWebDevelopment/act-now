@@ -20,6 +20,9 @@
 # rather than having to use require_relative.
 ENV["RACK_ENV"] = "test"
 require_relative '../config/application'
+require 'codeclimate-test-reporter'
+
+CodeClimate::TestReporter.start
 
 RSpec.configure do |config|
   
