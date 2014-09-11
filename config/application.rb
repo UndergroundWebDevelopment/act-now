@@ -11,3 +11,7 @@ Dir[File.join(__dir__, '../', 'app', '**', '*.rb')].each {|file| require file }
 
 ENV["RACK_ENV"] ||= "development"
 
+I18n.enforce_available_locales = true
+
+Chassis.repo.register :memory, MemoryRepo.new
+Chassis.repo.use :memory
