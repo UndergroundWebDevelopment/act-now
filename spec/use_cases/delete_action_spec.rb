@@ -5,8 +5,8 @@ RSpec.describe DeleteAction do
 
   subject { DeleteAction.new(id, nil) }
 
-  it "sets the action's deleted_at to the current timestamp" do
-    now = Time.now
+  it "sets the action's deleted_at to the current timestamp UTC" do
+    now = Time.now.utc
     Timecop.freeze(now) do 
       subject.run!
       expect(action.deleted_at).to eq now

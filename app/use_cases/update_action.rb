@@ -8,7 +8,6 @@ class UpdateAction
 
     action = ActionRepo.find(@id)
     action.title = @form.title
-    action.completed = @form.completed
     action.save
   end
 

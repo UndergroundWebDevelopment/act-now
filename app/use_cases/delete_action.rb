@@ -7,7 +7,7 @@ class DeleteAction
     authorize!
 
     action = ActionRepo.find(@id)
-    action.deleted_at = Time.now
+    action.deleted_at = Time.now.utc
     action.save
   end
 

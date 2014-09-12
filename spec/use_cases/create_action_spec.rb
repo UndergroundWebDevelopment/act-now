@@ -1,25 +1,11 @@
 RSpec.describe CreateAction do
 
   subject { CreateAction.new(form, nil) }
+  let(:object_class) { Action }
 
-  let(:form) do 
-    form = Form.new
-    allow(form).to receive(:validate!)
-    form
-  end
+  include_context "base form"
 
-  it "validates the form" do
-    expect(form).to receive(:validate!)
-    subject.run!
-  end
+  include_examples "validates the form"
 
-  it "creates an Action object from the form" do
-    expect(Action).to receive(:create).with(form.attributes)
-    subject.run!
-  end
-
-  it "returns an Action object" do
-    action = subject.run!
-    expect(action).to be_kind_of Action
-  end
+  include_examples "creates object from form" 
 end

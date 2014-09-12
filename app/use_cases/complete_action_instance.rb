@@ -1,4 +1,4 @@
-class CompleteAction
+class CompleteActionInstance
   def initialize(id, form, current_user)
     @id, @form, @current_user = id, form, current_user
   end
@@ -6,8 +6,8 @@ class CompleteAction
   def run!
     validate! and authorize!
 
-    action = ActionRepo.find(@id)
-    action.completed = true
+    action = ActionInstanceRepo.find(@id)
+    action.completed_at = Time.now.utc
     action.save
   end
 

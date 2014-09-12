@@ -21,6 +21,7 @@
 ENV["RACK_ENV"] = "test"
 require_relative '../config/application'
 require 'codeclimate-test-reporter'
+Dir[File.join(__dir__, 'support', '**', '*.rb')].each {|file| require file }
 
 CodeClimate::TestReporter.start
 
