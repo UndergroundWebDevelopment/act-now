@@ -4,6 +4,5 @@ class ListPendingActions
   end
 
   def run!
-    ActionRepo.find_pending(@current_user)
   end
 end

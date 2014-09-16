@@ -9,6 +9,9 @@ class CreateChore
 
     Chore.create do |chore|
       chore.title = @form.title
+      chore.action_id = @form.action_id
+      chore.trigger_type = @form.trigger_type
+      chore.trigger_params = @form.trigger_params
     end
   end
 

@@ -1,4 +1,3 @@
-class ActionInstanceRepo
+class TimelineEventRepo
   extend Chassis::Repo::Delegation
 end
-

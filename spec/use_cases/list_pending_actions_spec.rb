@@ -2,8 +2,7 @@ RSpec.describe ListPendingActions do
 
   subject { ListPendingActions.new(nil) }
 
-  it "retrieves pending actions" do
-    expect(ActionRepo).to receive(:find_pending)
-    subject.run!
+  it "includes chores with 'prompt' set to true" do
+    skip "not implemented"
   end
 end

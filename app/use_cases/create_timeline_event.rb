@@ -1,4 +1,4 @@
-class CreateActionInstance
+class CreateTimelineEvent
   def initialize(form, current_user)
     @form, @current_user = form, current_user
   end
@@ -6,7 +6,7 @@ class CreateActionInstance
   def run!
     validate! && authorize!
 
-    ActionInstance.create(@form.attributes)
+    TimelineEvent.create(@form.attributes)
   end
 
   private
